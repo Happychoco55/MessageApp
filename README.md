@@ -16,6 +16,6 @@
 - *My main focus is going to be the implementation of the user stories above. However I do plan on having some stretch user stories IF I get finished with the primary stories*
 ## Additional Documentation
 - *I will be adding additional documentation when the app is finished.*
-- Front-End Repo: *Not created yet*
+- Front-End Repo: https://github.com/Happychoco5/MessageAppFrontend
 ### Credits
 - Created by: Terrell Terry

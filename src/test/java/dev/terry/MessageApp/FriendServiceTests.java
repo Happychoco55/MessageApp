@@ -18,7 +18,7 @@ public class FriendServiceTests {
     FriendService friendListService;
 
     @Test
-    void find_by_status(){
+    void find_by_status() {
         List<Friend> friendList = this.friendListService.getFriendsByStatus(10, "Pending");
 //        System.out.println(friendList.toString());
         Assertions.assertEquals(0, friendList.size());
@@ -32,8 +32,9 @@ public class FriendServiceTests {
         Assertions.assertNotEquals(0, friendList.size());
     }
 
+
     @Test
-    void check_if_already_exists(){
+    void check_if_already_exists() {
         Assertions.assertFalse(this.friendListService.checkIfAlreadyExists(3, 10));
     }
 

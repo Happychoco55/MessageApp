@@ -29,12 +29,10 @@ public class AppUserServiceImpl implements AppUserService{
     }
 
     @Override
-    public List<AppUser> getUsersWithUsername(String username) {
-        //List<AppUser> appUserList = new ArrayList<>();
-        for(AppUser a : this.appUserRepo.findByUsername(username)){
-            a.setPassword("");
-        }
-        return this.appUserRepo.findByUsername(username);
+    public AppUser getUserWithUsername(String username) {
+        AppUser appUser = this.appUserRepo.findByUsername(username);
+        appUser.setPassword("");
+        return appUser;
     }
 
 
