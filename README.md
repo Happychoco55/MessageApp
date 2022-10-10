@@ -1,6 +1,7 @@
 # Astro Message System | Backend Repo
 - This is the Astro Message System. A system where friends can add each other and communicate over the vast reaches of the internet.
 - A solo project where people can talk to each other through messages.
+- Current status: *Unfinished*
 ## Primary User Stories
 |As a| I Want To|So That|
 |----|----------|-------|
