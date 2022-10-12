@@ -35,5 +35,10 @@ public class AppUserServiceImpl implements AppUserService{
         return appUser;
     }
 
+    @Override
+    public AppUser getUserWithId(int id) {
+        return this.appUserRepo.findById(id);
+    }
+
 
 }

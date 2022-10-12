@@ -5,7 +5,6 @@ import dev.terry.services.FriendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
@@ -15,11 +14,10 @@ public class FriendController {
     @Autowired
     FriendService friendService;
 
-    @PostMapping("/friends/{myId}/{friendId}")
-    int addFriend(@PathVariable String myId, @PathVariable String friendId){
-        int id = Integer.parseInt(myId);
-        int friend = Integer.parseInt(friendId);
-        int success = this.friendService.addFriend(id, friend);
+    @PostMapping("/friends")
+    int addFriend(@RequestBody Friend friend){
+        System.out.println("Called! " + friend.toString());
+        int success = this.friendService.addFriend(friend.getUserid(), friend.getFriend_id());
         if(success <= 0){
             //Unsuccessful
             return success;
@@ -30,25 +28,25 @@ public class FriendController {
         }
     }
 
-    @GetMapping("/friends/{id}")
-    List<Friend> getFriendsByStatus(@PathVariable String id, @RequestParam(required = true) String status){
+    @GetMapping("/friends/pending/{id}")
+    List<Friend> findPendingRequests(@PathVariable String id){
         int myId = Integer.parseInt(id);
-        return this.friendService.getFriendsByStatus(myId, status);
+        return this.friendService.findPendingRequests(myId);
+    }
+    @GetMapping("/friends/friends/{id}")
+    List<Friend> findFriends(@PathVariable String id){
+        int myId = Integer.parseInt(id);
+        return this.friendService.findFriends(myId);
     }
 
     @DeleteMapping("/friends/{id}/{friendId}")
-    int declineFriend(@PathVariable String id, @PathVariable String friendId){
-        int myId = Integer.parseInt(id);
-        int friend = Integer.parseInt(friendId);
-
-        return this.friendService.declineFriend(myId, friend);
+    int declineFriend(@RequestParam(required = true) String status, @PathVariable String id, @PathVariable String friendId){
+        return this.friendService.declineFriend(Integer.parseInt(id), Integer.parseInt(friendId), status);
     }
 
-    @PutMapping("/friends/{id}/{friendId}")
-    int acceptFriend(@PathVariable String id, @PathVariable String friendId){
-        int myId = Integer.parseInt(id);
-        int friend = Integer.parseInt(friendId);
-
-        return this.friendService.acceptFriend(myId, friend);
+    @PutMapping("/friends")
+    int acceptFriend(@RequestBody Friend friend){
+        System.out.println("Called! " + friend.toString());
+        return this.friendService.acceptFriend(friend.getUserid(), friend.getFriend_id());
     }
 }

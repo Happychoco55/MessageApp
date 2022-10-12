@@ -39,9 +39,9 @@ public class AppUserRepoTests {
 
     @Test
     void find_by_username(){
-        List<AppUser> appUserList = this.appUserRepo.findByUsername("Happy");
+        AppUser appUserList = this.appUserRepo.findByUsername("Happy");
         System.out.println(appUserList.toString());
-        Assertions.assertNotEquals(0, appUserList.size());
+        Assertions.assertNotEquals(0, appUserList.getId());
     }
 
 }

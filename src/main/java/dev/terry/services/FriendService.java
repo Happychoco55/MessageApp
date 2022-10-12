@@ -10,9 +10,10 @@ public interface FriendService {
 
     int addFriend(int myId, int friendId);
 
-    List<Friend> getFriendsByStatus(int id, String status);
+    List<Friend> findPendingRequests(int id);
+    List<Friend> findFriends(int id);
 
-    int declineFriend(int myId, int friendId);
+    int declineFriend(int myId, int friendId, String status);
 
     int acceptFriend(int myId, int friendId);
 }

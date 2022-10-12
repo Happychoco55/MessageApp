@@ -17,7 +17,7 @@ public class Message {
     private int receiver;
 
     @Column(name = "epoch_time")
-    private int epochTime;
+    private long epochTime;
 
     @Column(name = "contents")
     private String contents;
@@ -25,7 +25,7 @@ public class Message {
     public Message() {
     }
 
-    public Message(int messageId, int sender, int receiver, int epochTime, String contents) {
+    public Message(int messageId, int sender, int receiver, long epochTime, String contents) {
         this.messageId = messageId;
         this.sender = sender;
         this.receiver = receiver;
@@ -57,11 +57,11 @@ public class Message {
         this.receiver = receiver;
     }
 
-    public int getEpochTime() {
+    public long getEpochTime() {
         return epochTime;
     }
 
-    public void setEpochTime(int epochTime) {
+    public void setEpochTime(long epochTime) {
         this.epochTime = epochTime;
     }
 

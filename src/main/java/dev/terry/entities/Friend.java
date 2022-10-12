@@ -64,10 +64,11 @@ public class Friend {
 
     @Override
     public String toString() {
-        return "FriendList{" +
-                "userid=" + userid +
+        return "Friend{" +
+                "id=" + id +
+                ", userid=" + userid +
                 ", friend_id=" + friend_id +
-                ", status=" + status +
+                ", status='" + status + '\'' +
                 '}';
     }
 }

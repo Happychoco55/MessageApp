@@ -12,4 +12,5 @@ import java.util.List;
 @Repository
 public interface AppUserRepo extends JpaRepository<AppUser, Integer> {
     AppUser findByUsername(String username);
+    AppUser findById(int id);
 }

@@ -33,15 +33,19 @@ public class FriendServiceImpl implements FriendService {
     }
 
     @Override
-    public List<Friend> getFriendsByStatus(int id, String status) {
-        return this.friendRepo.findByStatus(id, status);
+    public List<Friend> findPendingRequests(int id) {
+        return this.friendRepo.findPendingRequests(id);
+    }
+    @Override
+    public List<Friend> findFriends(int id) {
+        return this.friendRepo.findFriends(id);
     }
 
     @Override
-    public int declineFriend(int myId, int friendId) {
+    public int declineFriend(int myId, int friendId, String status) {
         if(checkIfAlreadyExists(myId, friendId))
         {
-            return this.friendRepo.declineFriend(myId, friendId);
+            return this.friendRepo.declineFriend(myId, friendId, status);
         }
         return -1;
     }

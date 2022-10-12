@@ -24,7 +24,7 @@ public class FriendRepoTests {
 
     @Test
     void decline_friend(){
-        int i = friendRepo.declineFriend(3, 10);
+        int i = friendRepo.declineFriend(3, 10, "Pending");
         System.out.println(i);
     }
 

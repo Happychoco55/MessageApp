@@ -24,4 +24,14 @@ public class AppUserController {
         return this.appUserService.getAllUsers();
     }
 
+    @GetMapping("/appusers/{username}")
+    public AppUser getUserWithUsername(@PathVariable String username){
+        return this.appUserService.getUserWithUsername(username);
+    }
+
+    @GetMapping("/appusers/id/{id}")
+    public AppUser getUserWithId(@PathVariable String id){
+        return this.appUserService.getUserWithId(Integer.parseInt(id));
+    }
+
 }
