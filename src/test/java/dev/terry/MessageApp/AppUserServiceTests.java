@@ -19,9 +19,9 @@ public class AppUserServiceTests {
 
     @Test
     void find_by_username(){
-        List<AppUser> appUserList = this.appUserService.getUsersWithUsername("Happychoco5");
+        AppUser appUserList = this.appUserService.getUserWithUsername("Happychoco5");
         System.out.println(appUserList.toString());
-        Assertions.assertNotEquals(0, appUserList.size());
+        Assertions.assertNotEquals(0, appUserList.getId());
     }
 
 }
