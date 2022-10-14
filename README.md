@@ -15,6 +15,18 @@
 |User|Send messages to friends|They can see what I'm saying|
 ## Stretch User Stories
 - *My main focus is going to be the implementation of the user stories above. However I do plan on having some stretch user stories IF I get finished with the primary stories*
+|As a| I Want To|So That|
+|----|----------|-------|
+|User|Reset my password|just in case I forget my password|
+|User|Have group chats|I can conversate with many users|
+|User|Have a profile page|I can edit and adjust my information|
+|User|Have a profile picture|I can be more identifiable|
+|User|Have emojis|I can express the way I feel with friends|
+|User|Send images or gifs|I can send any files I would like to share with friends|
+|User|Edit my messages|I can make any corrections in realtime|
+|User|Delete my messages|I can remove any unnecessary messages|
+|User|Read receipts|I can see if my message has been read by my friend|
+|User|Voice call people|I can talk to my friends by speaking|
 ## Additional Documentation
 - *I will be adding additional documentation when the app is finished.*
 - Front-End Repo: https://github.com/Happychoco5/MessageAppFrontend
