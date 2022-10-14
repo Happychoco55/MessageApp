@@ -15,8 +15,8 @@
 |User|Send messages to friends|They can see what I'm saying|
 ## Stretch User Stories
 - *My main focus is going to be the implementation of the user stories above. However I do plan on having some stretch user stories IF I get finished with the primary stories*
-|As a| I Want To|So That|
-|----|----------|-------|
+|As a| I Want To a|So That|
+|----|-----------|-------|
 |User|Reset my password|just in case I forget my password|
 |User|Have group chats|I can conversate with many users|
 |User|Have a profile page|I can edit and adjust my information|
